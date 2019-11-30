@@ -6,8 +6,8 @@ import json
 from flask import Flask, request, abort, jsonify
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1tceHkbkFN1sz7t6kQAp702CMMmQP3Cu7lEKn4rnD2pY'
-SAMPLE_RANGE_NAME = 'Sheet1!A1:L16'
+SAMPLE_SPREADSHEET_ID = '1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0'
+SAMPLE_RANGE_NAME = 'Sheet1!a1:e4'
 
 app = Flask(__name__)
 
