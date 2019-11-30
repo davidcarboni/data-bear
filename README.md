@@ -10,15 +10,15 @@ You'll need to pass two parameters, a sheet ID and a cell range. The url will be
 
 ### Sheet ID
 
-You'll need your Google sheet ID, which you can get from the sharing link.
+You'll need the sheet ID, which you can get from the url or sharing link of your sheet.
 
-If the url of your sheet looks like this:
+If the url of your sheet looks something like this:
 
     https://docs.google.com/spreadsheets/d/1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0/edit#gid=0
 
 Your sheet ID is the segment after `https://docs.google.com/spreadsheets/d/`:
 
-   1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0
+    1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0
 
 ### Cell range
 
