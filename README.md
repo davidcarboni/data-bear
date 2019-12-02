@@ -22,7 +22,7 @@ Your sheet ID is the segment after `https://docs.google.com/spreadsheets/d/`:
 
 ### Cell range
 
-You'll also need the range of cells you'd like to serve. The range is `worksheet name`!`top-left`:`bottom right`, for example, `Sheet1!a1:c3` would serve rows 1-3 from columns a-c from a worksheet named "Sheet1".
+You'll also need the range of cells you'd like to serve. The range is `worksheet name`!`top-left`:`bottom right`, for example, `Sheet1!a1:c3` would serve rows 1-3 from columns a-c from a worksheet named "Sheet1". You can also use `Sheet1!a:c` if you don't have a fixed number of rows, providing the first row in the spreadsheet contains your headers 
 
 ## Data format
 
@@ -64,7 +64,7 @@ https://docs.google.com/spreadsheets/d/1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-ay
 
 You can view the data as an api using this link:
 
-https://data-bear.herokuapp.com/?sheet=1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0&range=Sheet1!a1:e4
+https://data-bear.herokuapp.com/?sheet=1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0&range=Sheet1!a:e
 
 ## Try it yourself
 
