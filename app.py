@@ -31,7 +31,10 @@ def records():
         for row in values[1:]:
             record = {}
             for i, heading in enumerate(headings):
-                record[heading] = row[i]
+                # Some rows may contain blank columns 
+                # and are shorter than the heading row
+                if len(row) >= heading:
+                    record[heading] = row[i]
             records.append(record)
 
     return jsonify(records)
