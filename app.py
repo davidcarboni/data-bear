@@ -17,6 +17,7 @@ def records():
     sheet = service.spreadsheets()
 
     # Call the Sheets API
+    print(f'Querying sheet {sheet_id} for range {cell_range}')
     result = sheet.values().get(spreadsheetId=sheet_id, range=cell_range).execute()
     values = result.get('values', [])
 
