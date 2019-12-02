@@ -66,3 +66,12 @@ You can view the data as an api using this link:
 
 https://data-bear.herokuapp.com/?sheet=1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0&range=Sheet1!a1:e4
 
+## Try it yourself
+
+Here's how to try it out for yourself:
+
+* Open the Google Sheet above
+* File > Make a copy
+* Get the new sheet ID from the url
+* Tweak the link above to point to your copy
+* Try editing the data in your sheet and see that change the API output
