@@ -33,7 +33,7 @@ def records():
             for i, heading in enumerate(headings):
                 # Some rows may contain blank columns 
                 # and are shorter than the heading row
-                if len(row) >= heading:
+                if len(row) > i:
                     record[heading] = row[i]
             records.append(record)
 
