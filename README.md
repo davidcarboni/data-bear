@@ -74,4 +74,4 @@ Here's how to try it out for yourself:
 * File > Make a copy
 * Get the new sheet ID from the url
 * Tweak the link above to point to your copy
-* Try editing the data in your sheet and see that change the API output
+* Try editing the data in your sheet and see API data change
