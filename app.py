@@ -4,13 +4,13 @@ import os
 
 app = Flask(__name__)
 
-sheets_api_key = os.getenv('SHEETS_API_KEY')
-sheet_id = os.getenv('SHEET_ID')
-cell_range = os.getenv('CELL_RANGE')
-
 @app.route('/')
 def records():
     """ List data from the spreadsheet """
+
+    sheets_api_key = os.getenv('SHEETS_API_KEY')
+    sheet_id = os.getenv('SHEET_ID')
+    cell_range = os.getenv('CELL_RANGE')
 
     # API client
     service = build('sheets', 'v4', developerKey=sheets_api_key)
