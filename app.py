@@ -8,12 +8,12 @@ app = Flask(__name__)
 
 sheets_api_key = os.getenv('SHEETS_API_KEY')
 folder_id = os.getenv('FOLDER_ID')
-sheet_id = os.getenv('SHEET_ID')
-cell_range = os.getenv('CELL_RANGE')
+
+file_list = None
 
 @app.route('/')
 def list_sheets():
-    items = list_folder()
+    items = list_folder(refresh=True)
 
     if not items:
         abort(404, 'No files found.')
@@ -43,7 +43,7 @@ def records(name):
     try:
         service = build('sheets', 'v4', developerKey=sheets_api_key)
         sheets = service.spreadsheets()
-        # Get the first worksheet name to use an the cell range
+        # Get the first worksheet name to use as the cell range
         metadata = sheets.get(spreadsheetId=sheet_id).execute()
         worksheets = metadata.get('sheets', '')
         worksheet = worksheets[0].get("properties", {}).get("title", "Sheet1")
@@ -68,11 +68,16 @@ def records(name):
 
     return jsonify(records)
 
-def list_folder():
+def list_folder(refresh=False):
+    global file_list
+
+    if file_list and not refresh:
+        return file_list
+
     service = build('drive', 'v3', developerKey=sheets_api_key)
 
     # Call the Drive v3 API
-    results = service.files().list(q="'1lTMzmb-N4F3nznDY5eV003O8NomPTYBg' in parents",
+    results = service.files().list(q=f"'{folder_id}' in parents",
         pageSize=10, fields="nextPageToken, files(id, name)").execute()
     items = results.get('files', [])
 
@@ -83,7 +88,8 @@ def list_folder():
             'name': item['name'],
             'id': item['id'],
         })
-    return result
+    file_list = result
+    return file_list
 
 
 if __name__ == '__main__':

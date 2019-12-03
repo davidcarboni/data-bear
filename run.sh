@@ -1,11 +1,9 @@
 export SHEETS_API_KEY=$(cat credentials/sheets-api-key.txt)
-export SHEET_ID=1cCUTcpmcxyKndVHCDvnl6IwBE7zXP1Lhq1kct-aytB0
-export CELL_RANGE=Sheet1!a:e
+export FOLDER_ID=1lTMzmb-N4F3nznDY5eV003O8NomPTYBg
 
 name=data-bear
 docker build --tag $name . && 
 docker run --rm -p 5000:5000 \
   -e SHEETS_API_KEY \
-  -e SHEET_ID \
-  -e CELL_RANGE \
+  -e FOLDER_ID \
   $name
