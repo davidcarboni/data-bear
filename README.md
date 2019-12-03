@@ -2,6 +2,9 @@
 
 Lets you serve a public Google folder of Sheets as a json api.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+
 ## Usage
 
 You'll need to pass an environment variable for the ID of the folder you'd like to serve, e.g.:
