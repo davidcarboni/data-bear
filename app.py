@@ -9,12 +9,12 @@ app = Flask(__name__)
 def records():
     """ List data from the spreadsheet """
 
-    sheets_api_key = os.getenv('SHEETS_API_KEY')
+    api_key = os.getenv('API_KEY')
     sheet_id = os.getenv('SHEET_ID')
     cell_range = os.getenv('CELL_RANGE')
 
     # API client
-    service = build('sheets', 'v4', developerKey=sheets_api_key)
+    service = build('sheets', 'v4', developerKey=api_key)
     sheet = service.spreadsheets()
 
     try:
