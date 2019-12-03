@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-sheets_api_key = os.getenv('SHEETS_API_KEY')
+api_key = os.getenv('API_KEY')
 folder_id = os.getenv('FOLDER_ID')
 
 file_list = None
@@ -41,7 +41,7 @@ def records(name):
 
     # Call the Sheets API
     try:
-        service = build('sheets', 'v4', developerKey=sheets_api_key)
+        service = build('sheets', 'v4', developerKey=api_key)
         sheets = service.spreadsheets()
         # Get the first worksheet name to use as the cell range
         metadata = sheets.get(spreadsheetId=sheet_id).execute()
@@ -74,7 +74,7 @@ def list_folder(refresh=False):
     if file_list and not refresh:
         return file_list
 
-    service = build('drive', 'v3', developerKey=sheets_api_key)
+    service = build('drive', 'v3', developerKey=api_key)
 
     # Call the Drive v3 API
     results = service.files().list(q=f"'{folder_id}' in parents",

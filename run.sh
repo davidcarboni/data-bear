@@ -1,5 +1,5 @@
 export SHEETS_API_KEY=$(cat credentials/sheets-api-key.txt)
-export FOLDER_ID=1lTMzmb-N4F3nznDY5eV003O8NomPTYBg
+export FOLDER_ID=14a_DPP7dz2tLa3MmTQK7rAKzry8KQwG3
 
 name=data-bear
 docker build --tag $name . && 
