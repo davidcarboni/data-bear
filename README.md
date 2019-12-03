@@ -70,16 +70,18 @@ Here's a sample folder:
 
 https://drive.google.com/drive/folders/14a_DPP7dz2tLa3MmTQK7rAKzry8KQwG3
 
-You can view the data as an api using this link:
+You can view the data as an api using these links:
 
-https://data-bear-folder.herokuapp.com/
+* https://data-bear-folder.herokuapp.com/
+* https://data-bear-folder.herokuapp.com/three-bears
+* https://data-bear-folder.herokuapp.com/three-unicorns
 
 ## Try it yourself
 
 Here's how to try it out for yourself:
 
 * Create a folder in Google Drive
-* Set sharing to "anyone with the link" (you may need to use advanced options)
+* Set sharing to "anyone with the link" (you may need to use advanced options) - it needs to be public
 * Get the folder ID from the url
 * Pass your api key and folder ID as environment variables (e.g. edit the `run.sh` script)
-* Create a couple of spreadsheets in the folder and see them as data served by the api
+* Create a couple of spreadsheets in your folder and see them as data served by the api
