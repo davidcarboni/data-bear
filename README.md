@@ -2,6 +2,8 @@
 
 Lets you serve a public Google Sheet as a json api.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Usage
 
 You'll need to pass two parameters, a sheet ID and a cell range. The url will be of the format:
