@@ -3,5 +3,13 @@
   "description": "Google sheets as an API",
   "repository": "https://github.com/davidcarboni/data-bear",
   "logo": "https://data-bear.herokuapp.com/static/logo.png",
-  "keywords": ["node", "express", "static"]
+  "keywords": ["node", "express", "static"],
+  "env": {
+    "API_KEY": {
+      "description": "A Google API key. You can generate one at https://console.cloud.google.com/apis/credentials. The key needs a minimun of access to the Drive and Sheets APIs."
+    },
+    "FOLDER_ID": {
+      "description": "The ID of the Google Drive folder you'd like to serve spreadsheet APIs from. The folder needs to have public read access."
+    }
+  }
 }
