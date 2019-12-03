@@ -1,0 +1,19 @@
+{
+  "name": "Data Bear",
+  "description": "Google sheets as an API",
+  "repository": "https://github.com/davidcarboni/data-bear",
+  "logo": "https://data-bear.herokuapp.com/static/logo.png",
+  "keywords": ["node", "express", "static"],
+  "env": {
+    "API_KEY": {
+      "description": "A Google API key. You can generate one at https://console.cloud.google.com/apis/credentials. The key needs a minimun of access to the Drive and Sheets APIs."
+    },
+    "SHEET_ID": {
+      "description": "The ID of the Google sheet you'd like to serve the API from. The sheet needs to have public read access."
+    }
+    "CELL_RANGE": {
+      "description": "The cell range you'd like to use for API data. This can be the worksheet name, e.g. Sheet1, or a range like Sheet1!a1:c5. (NB: if you use a whole worksheet, your data table must start at cell a1)",
+      "value": "Sheet1"
+    }
+  }
+}
