@@ -1,0 +1,7 @@
+{
+  "name": "Data Bear",
+  "description": "Google sheets as an API",
+  "repository": "https://github.com/davidcarboni/data-bear",
+  "logo": "https://data-bear.herokuapp.com/static/logo.png",
+  "keywords": ["node", "express", "static"]
+}
